@@ -24,6 +24,13 @@ allprojects {
 	}
 }
 
+allprojects {
+	repositories {
+		mavenLocal()   // 👈 REQUIRED
+		mavenCentral()
+	}
+}
+
 nohttp {
 	allowlistFile = project.file('src/nohttp/allowlist.lines')
 	source.exclude "**/bin/**"

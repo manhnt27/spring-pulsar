@@ -1,0 +1,1 @@
+for i in {1..300}; do  ./gradlew :spring-pulsar:test --tests "org.springframework.pulsar.listener.DefaultPulsarMessageListenerContainerTxnTests.batchListenerUsesBatchAckWhenSharedSub" --rerun-tasks || break; done
